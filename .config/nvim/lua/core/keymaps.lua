@@ -43,11 +43,11 @@ keymap.set("n", "<leader>se", "<C-w>=", { desc = "Make splits equal size" }) -- 
 keymap.set("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close current split" }) -- close current split window
 
 -- Tabs
-keymap.set("n", "<leader><leader>n", "<cmd>tabnew<CR>", { desc = "Open new tab" }) -- open new tab
-keymap.set("n", "<C-w>", "<cmd>tabclose<CR>", { desc = "Close current tab" }) -- close current tab
+keymap.set("n", "<leader>nt", "<cmd>tabnew<CR>", { desc = "Open new tab" }) -- open new tab
+keymap.set("n", "<leader>ct", "<cmd>tabclose<CR>", { desc = "Close current tab" }) -- close current tab
 keymap.set("n", "<leader>u", "<cmd>tabn<CR>", { desc = "Go to next tab" }) --  go to next tab
 keymap.set("n", "<leader><leader>u", "<cmd>tabp<CR>", { desc = "Go to previous tab" }) --  go to previous tab
-keymap.set("n", "<leader>nt", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" }) --  move current buffer to new tab
+keymap.set("n", "<leader>mt", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" }) --  move current buffer to new tab
 
 -- Buffer management
 vim.api.nvim_set_keymap("n", "<leader><leader>d", ":bd<CR>", {noremap = false}) -- close current buffer
@@ -56,11 +56,11 @@ vim.api.nvim_set_keymap("n", "<leader><leader>g", ":bn<CR>", {noremap = false}) 
 keymap.set("n", "<leader><leader>nb", ":e") -- New buffer
 keymap.set("n", "<leader><leader>lb", ":ls") -- List the buffers
 
--- Tmux window managment 
-keymap.set("n", "<C-S>h", "<cmd>TmuxNavigateLeft<CR>")
-keymap.set("n", "<C-S>l", "<cmd>TmuxNavigateRight<CR>")
-keymap.set("n", "<C-S>j", "<cmd>TmuxNavigateDown<CR>")
-keymap.set("n", "<C-S>k", "<cmd>TmuxNavigateUp<CR>")
+-- -- Tmux window managment 
+-- keymap.set("n", "<C-S>h", "<cmd>TmuxNavigateLeft<CR>")
+-- keymap.set("n", "<C-S>l", "<cmd>TmuxNavigateRight<CR>")
+-- keymap.set("n", "<C-S>j", "<cmd>TmuxNavigateDown<CR>")
+-- keymap.set("n", "<C-S>k", "<cmd>TmuxNavigateUp<CR>")
 
 --Insert mode
 keymap.set("i", "<C-S>j", "<down>", { desc = "arrow down in insert mode" })
