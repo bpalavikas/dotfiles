@@ -63,8 +63,8 @@ keymap.set("n", "<leader><leader>lb", ":ls") -- List the buffers
 -- keymap.set("n", "<C-S>k", "<cmd>TmuxNavigateUp<CR>")
 
 --Insert mode
-keymap.set("i", "<C-S>j", "<down>", { desc = "arrow down in insert mode" })
-keymap.set("i", "<C-S>k", "<up>", { desc = "arrow up in insert mode" })
+-- keymap.set("i", "<C-S>j", "<down>", { desc = "arrow down in insert mode" })
+-- keymap.set("i", "<C-S>k", "<up>", { desc = "arrow up in insert mode" })
 
 -- set telescope keybinds
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Fuzzy find files in cwd" })
@@ -73,10 +73,13 @@ keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>", { desc = "Find str
 keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", { desc = "Find string under cursor in cwd" })
 
 -- set nvimtree keybinds 
-keymap.set("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle file explorer" }) -- toggle file explorer
-keymap.set("n", "<leader>ef", "<cmd>NvimTreeFindFileToggle<CR>", { desc = "Toggle file explorer on current file" }) -- toggle file explorer on current file
-keymap.set("n", "<leader>ec", "<cmd>NvimTreeCollapse<CR>", { desc = "Collapse file explorer" }) -- collapse file explorer
-keymap.set("n", "<leader>er", "<cmd>NvimTreeRefresh<CR>", { desc = "Refresh file explorer" }) -- refresh file explorer
+-- keymap.set("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle file explorer" }) -- toggle file explorer
+-- keymap.set("n", "<leader>ef", "<cmd>NvimTreeFindFileToggle<CR>", { desc = "Toggle file explorer on current file" }) -- toggle file explorer on current file
+-- keymap.set("n", "<leader>ec", "<cmd>NvimTreeCollapse<CR>", { desc = "Collapse file explorer" }) -- collapse file explorer
+-- keymap.set("n", "<leader>er", "<cmd>NvimTreeRefresh<CR>", { desc = "Refresh file explorer" }) -- refresh file explorer
+
+-- Oil keybinds
+keymap.set("n", "<leader>e", "<cmd>Oil<CR>", { desc = "Open Oil" })
 
 -- set harpoon keybinds
 keymap.set("n", "<leader><leader>m", ":lua require('harpoon.mark').add_file()<cr>",{ desc = "Mark file with harpoon" })

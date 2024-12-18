@@ -36,6 +36,8 @@ return {
 
       local cmp = require('cmp')
 
+        -- require('blink.cmp').get_lspcapabilities()
+
       local sources = {
         { name = 'neorg' },
         { name = 'nvim_lsp', priority = 1000 },
