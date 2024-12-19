@@ -49,13 +49,6 @@ keymap.set("n", "<leader>u", "<cmd>tabn<CR>", { desc = "Go to next tab" }) --  g
 keymap.set("n", "<leader><leader>u", "<cmd>tabp<CR>", { desc = "Go to previous tab" }) --  go to previous tab
 keymap.set("n", "<leader>mt", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" }) --  move current buffer to new tab
 
--- Buffer management
-vim.api.nvim_set_keymap("n", "<leader><leader>d", ":bd<CR>", {noremap = false}) -- close current buffer
-vim.api.nvim_set_keymap("n", "<leader><leader>f", ":bp<CR>", {noremap = false}) -- go to previous buffer
-vim.api.nvim_set_keymap("n", "<leader><leader>g", ":bn<CR>", {noremap = false}) -- go to next buffer
-keymap.set("n", "<leader><leader>nb", ":e") -- New buffer
-keymap.set("n", "<leader><leader>lb", ":ls") -- List the buffers
-
 -- -- Tmux window managment 
 -- keymap.set("n", "<C-S>h", "<cmd>TmuxNavigateLeft<CR>")
 -- keymap.set("n", "<C-S>l", "<cmd>TmuxNavigateRight<CR>")
@@ -72,12 +65,6 @@ keymap.set("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", { desc = "Fuzzy fin
 keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>", { desc = "Find string in cwd" })
 keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", { desc = "Find string under cursor in cwd" })
 
--- set nvimtree keybinds 
--- keymap.set("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle file explorer" }) -- toggle file explorer
--- keymap.set("n", "<leader>ef", "<cmd>NvimTreeFindFileToggle<CR>", { desc = "Toggle file explorer on current file" }) -- toggle file explorer on current file
--- keymap.set("n", "<leader>ec", "<cmd>NvimTreeCollapse<CR>", { desc = "Collapse file explorer" }) -- collapse file explorer
--- keymap.set("n", "<leader>er", "<cmd>NvimTreeRefresh<CR>", { desc = "Refresh file explorer" }) -- refresh file explorer
-
 -- Oil keybinds
 keymap.set("n", "<leader>e", "<cmd>Oil<CR>", { desc = "Open Oil" })
 
@@ -87,3 +74,9 @@ keymap.set("n", "<leader><leader>k", ":lua require('harpoon.ui').nav_next()<cr>"
 keymap.set("n", "<leader><leader>j", ":lua require('harpoon.ui').nav_prev()<cr>",{ desc = "Go to previous harpoon mark" })
 keymap.set("n", "<leader><leader>h", ":lua require('harpoon.ui').toggle_quick_menu()<cr>", {desc = "toggle menu"})
 
+-- Buffer management
+vim.api.nvim_set_keymap("n", "<leader><leader>d", ":bd<CR>", {noremap = false}) -- close current buffer
+vim.api.nvim_set_keymap("n", "<leader><leader>f", ":bp<CR>", {noremap = false}) -- go to previous buffer
+vim.api.nvim_set_keymap("n", "<leader><leader>g", ":bn<CR>", {noremap = false}) -- go to next buffer
+keymap.set("n", "<leader><leader>nb", ":e") -- New buffer
+keymap.set("n", "<leader><leader>lb", ":ls") -- List the buffers
