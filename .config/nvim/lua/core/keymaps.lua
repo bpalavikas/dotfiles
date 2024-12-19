@@ -62,9 +62,9 @@ keymap.set("n", "<leader><leader>lb", ":ls") -- List the buffers
 -- keymap.set("n", "<C-S>j", "<cmd>TmuxNavigateDown<CR>")
 -- keymap.set("n", "<C-S>k", "<cmd>TmuxNavigateUp<CR>")
 
---Insert mode
--- keymap.set("i", "<C-S>j", "<down>", { desc = "arrow down in insert mode" })
--- keymap.set("i", "<C-S>k", "<up>", { desc = "arrow up in insert mode" })
+-- Git signs
+keymap.set("n", "<leader>gp", ":Gitsigns preview_hunk<CR>", {})
+keymap.set("n", "<leader>gb", ":Gitsigns toggle_current_line_blame<CR>", {})
 
 -- set telescope keybinds
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Fuzzy find files in cwd" })
