@@ -10,6 +10,13 @@ local keymap = vim.keymap -- for conciseness
 keymap.set("n", "<leader>j", "o<ESC>")
 keymap.set("n", "<leader>k", "O<ESC>")
 
+-- move current line up 1 down 1
+keymap.set("n", "<A-j>", ":m +1<CR>==",{desc = "move line 1 down"})
+keymap.set("n", "<A-k>", ":m -2<CR>==",{desc = "move line 1 up"})
+
+keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv",{desc = "move selected lines 1 down"})
+keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv",{desc = "move selected lines 1 up"})
+
 -- saving and new file and quitting 
 keymap.set("n", "<leader>q", ":q<CR>", { desc = "Quit" })
 keymap.set("n", "<leader><leader>q", ":q!<CR>", { desc = "Quit without saving" })
