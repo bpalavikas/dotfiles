@@ -112,6 +112,7 @@ export PATH=$PATH:/usr/local/go/bin
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 alias python=python3
+alias G=git
 #
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
