@@ -66,11 +66,14 @@ keymap.set("n", "<leader>mt", "<cmd>tabnew %<CR>", { desc = "Open current buffer
 keymap.set("n", "<leader>gp", ":Gitsigns preview_hunk<CR>", {})
 keymap.set("n", "<leader>gb", ":Gitsigns toggle_current_line_blame<CR>", {})
 
+-- Git fugitive
+vim.api.nvim_set_keymap('n', '<leader>g', ':topleft G<CR> :resize 8<CR>', { noremap = true, silent = true })
+
 -- set telescope keybinds
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Fuzzy find files in cwd" })
-keymap.set("n", "<leader>fd", "<cmd>Telescope oldfiles<cr>", { desc = "Fuzzy find recent files" })
+keymap.set("n", "<leader>fo", "<cmd>Telescope oldfiles<cr>", { desc = "Fuzzy find recent files" })
 keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>", { desc = "Find string in cwd" })
-keymap.set("n", "<leader>fa", "<cmd>Telescope grep_string<cr>", { desc = "Find string under cursor in cwd" })
+keymap.set("n", "<leader>fh", function()require('telescope.builtin').find_files({ hidden = true })end, { desc = "Find files, including hidden ones" })
 
 -- Oil keybinds
 keymap.set("n", "<leader>e", "<cmd>Oil<CR>", { desc = "Open Oil" })
