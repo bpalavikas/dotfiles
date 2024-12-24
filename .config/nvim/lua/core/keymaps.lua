@@ -90,3 +90,16 @@ vim.api.nvim_set_keymap("n", "<leader><leader>f", ":bp<CR>", {noremap = false}) 
 vim.api.nvim_set_keymap("n", "<leader><leader>g", ":bn<CR>", {noremap = false}) -- go to next buffer
 keymap.set("n", "<leader><leader>nb", ":e") -- New buffer
 keymap.set("n", "<leader><leader>lb", ":ls") -- List the buffers
+
+-- autocmd('LspAttach', {
+--     group = bogart,
+--     callback = function(e)
+--         local opts = { buffer = e.buf }
+--         vim.keymap.set('n', 'gd', function() vim.lsp.buf.definition() end, opts)
+--         vim.keymap.set('n', 'gh', function() vim.lsp.buf.hover() end, opts)
+--         vim.keymap.set('n', 'en', function() vim.diagnostic.goto_next() end, opts)
+--         vim.keymap.set('n', 'ep', function() vim.diagnostic.goto_prev() end, opts)
+--     end
+-- })
+
+
