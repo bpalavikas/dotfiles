@@ -56,11 +56,11 @@ keymap.set("n", "<leader>u", "<cmd>tabn<CR>", { desc = "Go to next tab" }) --  g
 keymap.set("n", "<leader><leader>u", "<cmd>tabp<CR>", { desc = "Go to previous tab" }) --  go to previous tab
 keymap.set("n", "<leader>mt", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" }) --  move current buffer to new tab
 
--- -- Tmux window managment 
--- keymap.set("n", "<C-S>h", "<cmd>TmuxNavigateLeft<CR>")
--- keymap.set("n", "<C-S>l", "<cmd>TmuxNavigateRight<CR>")
--- keymap.set("n", "<C-S>j", "<cmd>TmuxNavigateDown<CR>")
--- keymap.set("n", "<C-S>k", "<cmd>TmuxNavigateUp<CR>")
+-- -- Tmux window managment
+keymap.set("n", "<C-S>h", "<cmd>TmuxNavigateLeft<CR>")
+keymap.set("n", "<C-S>l", "<cmd>TmuxNavigateRight<CR>")
+keymap.set("n", "<C-S>j", "<cmd>TmuxNavigateDown<CR>")
+keymap.set("n", "<C-S>k", "<cmd>TmuxNavigateUp<CR>")
 
 -- Git signs
 keymap.set("n", "<leader>gp", ":Gitsigns preview_hunk<CR>", {})
@@ -91,15 +91,5 @@ vim.api.nvim_set_keymap("n", "<leader><leader>g", ":bn<CR>", {noremap = false}) 
 keymap.set("n", "<leader><leader>nb", ":e") -- New buffer
 keymap.set("n", "<leader><leader>lb", ":ls") -- List the buffers
 
--- autocmd('LspAttach', {
---     group = bogart,
---     callback = function(e)
---         local opts = { buffer = e.buf }
---         vim.keymap.set('n', 'gd', function() vim.lsp.buf.definition() end, opts)
---         vim.keymap.set('n', 'gh', function() vim.lsp.buf.hover() end, opts)
---         vim.keymap.set('n', 'en', function() vim.diagnostic.goto_next() end, opts)
---         vim.keymap.set('n', 'ep', function() vim.diagnostic.goto_prev() end, opts)
---     end
--- })
 
 

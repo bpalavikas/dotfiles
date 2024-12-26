@@ -113,6 +113,7 @@ export PATH=$PATH:/usr/local/go/bin
 # For a full list of active aliases, run `alias`.
 alias python=python3
 alias G=git
+alias bat=batcat
 #
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"

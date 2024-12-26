@@ -1,0 +1,25 @@
+[global_config]
+  borderless = True
+  title_transmit_bg_color = "#9a9996"
+  title_receive_bg_color = "#5e5c64"
+  title_inactive_fg_color = "#ffffff"
+  title_inactive_bg_color = "#241f31"
+  inactive_color_offset = 0.6067415730337079
+[keybindings]
+[profiles]
+  [[default]]
+    background_color = "#282828"
+    cursor_color = "#aaaaaa"
+    font = Mononoki Nerd Font 13
+    foreground_color = "#ebdbb2"
+    palette = "#282828:#cc241d:#98971a:#d79921:#458588:#b16286:#689d6a:#a89984:#928374:#fb4934:#b8bb26:#fabd2f:#83a598:#d3869b:#8ec07c:#ebdbb2"
+    use_system_font = False
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+[plugins]
