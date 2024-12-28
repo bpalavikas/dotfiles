@@ -2,7 +2,6 @@
 vim.g.have_nerd_font = true
 
 -- Vim options
--- 
 local opt = vim.opt
 
 -- line numbers
@@ -11,9 +10,9 @@ opt.number = true
 opt.numberwidth = 1
 
 -- tabs indentation
-opt.tabstop = 4
-opt.shiftwidth = 4
-opt.softtabstop = 4
+opt.tabstop = 2
+opt.shiftwidth = 2
+opt.softtabstop = 2
 opt.expandtab = true
 opt.autoindent = true
 opt.smarttab = true
@@ -36,14 +35,13 @@ opt.cmdheight = 1
 opt.mouse = 'a'
 opt.termguicolors = true
 opt.colorcolumn = '80'
-opt.signcolumn 	= "yes"
+opt.signcolumn = "yes"
 opt.showtabline = 2
 opt.showmode = true
 opt.showcmd = true
 opt.showmatch = true
 opt.laststatus = 2
 opt.pumheight = 10
-
 
 -- backspace
 opt.backspace = "indent,eol,start"

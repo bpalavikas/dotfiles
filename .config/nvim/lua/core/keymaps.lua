@@ -91,5 +91,5 @@ vim.api.nvim_set_keymap("n", "<leader><leader>g", ":bn<CR>", {noremap = false}) 
 keymap.set("n", "<leader><leader>nb", ":e") -- New buffer
 keymap.set("n", "<leader><leader>lb", ":ls") -- List the buffers
 
-
+keymap.set("n", "<leader><leader>x", "<cmd>source %<CR>", { desc = "Execute the current file" })
 
