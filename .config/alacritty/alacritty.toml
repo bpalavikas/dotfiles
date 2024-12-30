@@ -1,7 +1,10 @@
 [window]
 opacity = 0.9
+decorations = "None"
 
 [font]
 #normal.family = 'Courier Prime Code'
 normal.family = 'HackNerdFont'
+
+
 
