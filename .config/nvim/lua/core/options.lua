@@ -4,6 +4,9 @@ vim.g.have_nerd_font = true
 -- Vim options
 local opt = vim.opt
 
+-- obsidian
+opt.conceallevel = 1
+
 -- line numbers
 opt.relativenumber = true
 opt.number = true

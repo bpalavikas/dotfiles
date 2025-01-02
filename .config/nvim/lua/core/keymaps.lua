@@ -95,3 +95,12 @@ keymap.set("n", "<leader><leader>lb", ":ls") -- List the buffers
 
 keymap.set("n", "<leader><leader>x", "<cmd>source %<CR>", { desc = "Execute the current file" })
 
+-- Obsidian
+keymap.set("n", "<leader>oo", ":ObsidianOpen<CR>",{desc = "open obsidian"})
+keymap.set("n", "<leader>on", ":ObsidianNew",{desc = "Create new file"})
+keymap.set("n", "<leader>os", ":ObsidianSearch<CR>",{desc = "Search for files"})
+keymap.set("n", "<leader>oq", ":ObsidianQuickSwitch<CR>",{desc = "Telescope finder for md"})
+keymap.set("n", "<leader>ot", ":ObsidianNewFromTemplate",{desc = "Create new file from template"})
+keymap.set("n", "<leader>ol", ":ObsidianLinks<CR>",{desc = "open obsidian"})
+
+
