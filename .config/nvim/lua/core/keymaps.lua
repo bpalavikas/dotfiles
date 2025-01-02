@@ -29,9 +29,11 @@ keymap.set("i", "jj", "<ESC>")
 keymap.set("v", "<", "<gv")
 keymap.set("v", ">", ">gv")
 
--- Commenting out code
-vim.api.nvim_set_keymap("n", "<C-_>", "gcc", {noremap = false})
-vim.api.nvim_set_keymap("v", "<C-_>", "gc", {noremap = false})
+-- Commenting out code _> is ment to be /
+-- keymap.set("n", "<C-_>", "gcc", {noremap = false})
+-- keymap.set("v", "<C-_>", "gc", {noremap = false})
+vim.keymap.set('n', 'c/', ':normal gcc<CR><DOWN>', { desc = '[/] Toggle comment line' })
+vim.keymap.set('v', 'c/', '<Esc>:normal gvgc<CR>', { desc = '[/] Toggle comment block' })
 
 -- clear search highlights
 keymap.set("n", "<leader>ch", ":nohl<CR>", { desc = "Clear search highlights" })

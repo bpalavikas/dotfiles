@@ -4,5 +4,4 @@ return{
         opts = {
         -- add options
     },
-    lazy = false,
 }
