@@ -21,7 +21,7 @@ return {
     workspaces = {
       {
         name = "personal",
-        path = "/mnt/Storage/OneDrive-LaTrobe/Obsidian/",
+        path = "~/obsidian/",
       },
     },
   },
