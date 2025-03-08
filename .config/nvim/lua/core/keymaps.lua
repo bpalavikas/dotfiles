@@ -23,6 +23,7 @@ keymap.set("n", "<leader><leader>q", ":q!<CR>", { desc = "Quit without saving" }
 keymap.set("n", "<leader>w", ":w<CR>")
 keymap.set("n", "<leader><leader>w", ":wq<CR>")
 
+-- Quick way to ESC
 keymap.set("i", "jj", "<ESC>")
 
 -- indenting
@@ -30,10 +31,10 @@ keymap.set("v", "<", "<gv")
 keymap.set("v", ">", ">gv")
 
 -- Commenting out code _> is ment to be /
--- keymap.set("n", "<C-_>", "gcc", {noremap = false})
--- keymap.set("v", "<C-_>", "gc", {noremap = false})
-vim.keymap.set('n', 'c/', ':normal gcc<CR><DOWN>', { desc = '[/] Toggle comment line' })
-vim.keymap.set('v', 'c/', '<Esc>:normal gvgc<CR>', { desc = '[/] Toggle comment block' })
+keymap.set("n", "<leader>/", "gcc", {noremap = false})
+keymap.set("v", "<leader>/", "gc", {noremap = false})
+--keymap.set('n', 'C/', ':normal gcc<CR><DOWN>', { desc = '[/] Toggle comment line' })
+--keymap.set('v', 'C/', '<Esc>:normal gvgc<CR>', { desc = '[/] Toggle comment block' })
 
 -- clear search highlights
 keymap.set("n", "<leader>ch", ":nohl<CR>", { desc = "Clear search highlights" })
