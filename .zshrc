@@ -120,6 +120,8 @@ export PATH=$PATH:/opt/microchip/xc32/v4.60/bin
 alias python=python3
 alias G=git
 alias bat=batcat
+alias fd=fdfind
+
 alias lls="exa -la"
 alias lt="exa -T"
 

@@ -17,8 +17,8 @@ syntax on
 
 " Configs
 set number
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set expandtab
 set autoindent
 set smartindent
@@ -48,6 +48,8 @@ nnoremap <leader>j o<esc>
 nnoremap <leader>k O<esc>
 
 imap jj <esc>
+
+
 
 " You can split the window in Vim by typing :split or :vsplit.
 " Navigate the split view easier by pressing CTRL+j, CTRL+k, CTRL+h, or CTRL+l.
