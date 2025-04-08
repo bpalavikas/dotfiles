@@ -146,3 +146,5 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 export PATH=/opt/cmake-3.30/bin:$PATH
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /home/thinkpad_linux/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
