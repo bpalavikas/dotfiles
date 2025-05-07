@@ -217,6 +217,7 @@ for_window [class="regolith-control-center"] move to workspace $ws10, layout tab
 
 
 
+exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpaper/Manga/mob767287.png
 ###############################################################################
 
 # WM Config Partials
@@ -242,7 +243,6 @@ exec --no-startup-id [ -z "${NOTIFY_SOCKET-}" ] \
 
 
 ###############################################################################
-exec_always --no-startup-id feh --bg-scale /home/little-bogart/Pictures/wallpaper/Manga/mob767287.png
 
 
 
