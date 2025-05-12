@@ -1,11 +1,12 @@
 local config = function()
-    local theme = require('lualine.themes.gruvbox-material')
-    -- set bg transparency in all modes
-	theme.normal.c.bg = nil
-	theme.insert.c.bg = nil
-	theme.visual.c.bg = nil
-	theme.replace.c.bg = nil
-	theme.command.c.bg = nil
+  local theme = require("lualine.themes.gruvbox-material")
+
+  for _, mode in pairs({ "normal", "insert", "visual", "replace", "command" }) do
+    if theme[mode] and theme[mode].c then
+      theme[mode].c.bg = nil
+    end
+  end
+
     require('lualine').setup({
         options = {
             theme = theme,
@@ -28,7 +29,7 @@ return{
     lazy = false,
     dependencies = {
         "nvim-tree/nvim-web-devicons",
-        "akinsho/nvim-bufferline.lua",
+        "akinsho/bufferline.nvim",
     },
     config = config,
 }
