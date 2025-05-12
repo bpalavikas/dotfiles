@@ -24,17 +24,11 @@ keymap.set("n", "<leader>w", ":w<CR>")
 keymap.set("n", "<leader><leader>w", ":wq<CR>")
 
 -- Quick way to ESC
-keymap.set("i", "jj", "<ESC>")
+-- keymap.set("i", "nnen", "<ESC>")
 
 -- indenting
 keymap.set("v", "<", "<gv")
 keymap.set("v", ">", ">gv")
-
--- Commenting out code _> is ment to be /
-keymap.set("n", "<leader>/", "gcc", {noremap = false})
-keymap.set("v", "<leader>/", "gc", {noremap = false})
---keymap.set('n', 'C/', ':normal gcc<CR><DOWN>', { desc = '[/] Toggle comment line' })
---keymap.set('v', 'C/', '<Esc>:normal gvgc<CR>', { desc = '[/] Toggle comment block' })
 
 -- clear search highlights
 keymap.set("n", "<leader>ch", ":nohl<CR>", { desc = "Clear search highlights" })
@@ -103,5 +97,4 @@ keymap.set("n", "<leader>os", ":ObsidianSearch<CR>",{desc = "Search for files"})
 keymap.set("n", "<leader>oq", ":ObsidianQuickSwitch<CR>",{desc = "Telescope finder for md"})
 keymap.set("n", "<leader>ot", ":ObsidianNewFromTemplate",{desc = "Create new file from template"})
 keymap.set("n", "<leader>ol", ":ObsidianLinks<CR>",{desc = "open obsidian"})
-
 
