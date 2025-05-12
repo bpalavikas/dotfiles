@@ -6,5 +6,7 @@ decorations = "None"
 #normal.family = 'Courier Prime Code'
 normal.family = 'HackNerdFont'
 
-
+[terminal.shell]
+program = "/usr/bin/tmux"
+args = ["new-session", "-A", "-s", "default"]
 
