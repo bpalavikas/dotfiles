@@ -1,0 +1,5 @@
+!regolith.look.path: /usr/share/regolith-look/gruvbox
+
+
+wm.bar.position: top
+regolith.look.path: /usr/share/regolith-look/blackhole
