@@ -62,7 +62,7 @@ return {
               end,
               settings = {
                 formatterMode = 'typstyle',
-                exportPdf = 'onSave',
+                exportPdf = 'none',
                 semanticTokens = 'disable',
               },
             })

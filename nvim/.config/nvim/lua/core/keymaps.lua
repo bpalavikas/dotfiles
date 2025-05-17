@@ -98,3 +98,17 @@ keymap.set("n", "<leader>oq", ":ObsidianQuickSwitch<CR>",{desc = "Telescope find
 keymap.set("n", "<leader>ot", ":ObsidianNewFromTemplate",{desc = "Create new file from template"})
 keymap.set("n", "<leader>ol", ":ObsidianLinks<CR>",{desc = "open obsidian"})
 
+-- Typst
+vim.keymap.set('n', '<leader>tc', function()
+  local input_file = vim.fn.expand('%')
+  local output_file = vim.fn.expand('%:r') .. '.pdf'
+  vim.cmd('write') -- Save current buffer
+
+  local result = vim.fn.system({ "typst", "compile", input_file, output_file })
+
+  if vim.v.shell_error == 0 then
+    vim.notify("✅ Compiled to PDF: " .. output_file, vim.log.levels.INFO)
+  else
+    vim.notify("❌ Compile failed:\n" .. result, vim.log.levels.ERROR)
+  end
+end, { noremap = true, silent = true })
