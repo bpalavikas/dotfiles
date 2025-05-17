@@ -1,5 +1,3 @@
--- lsp_full_config.lua - Universal LSP setup with diagnostics, completion, and Typst preview
-
 return {
   {
     'neovim/nvim-lspconfig',
@@ -14,7 +12,10 @@ return {
     },
     config = function()
       local lspconfig = require('lspconfig')
+      local cmp = require('cmp')
       local cmp_nvim_lsp = require('cmp_nvim_lsp')
+
+      local capabilities = cmp_nvim_lsp.default_capabilities()
 
       require('mason').setup()
 
@@ -26,12 +27,13 @@ return {
         handlers = {
           function(server_name)
             lspconfig[server_name].setup({
-              capabilities = cmp_nvim_lsp.default_capabilities(),
+              capabilities = capabilities,
             })
           end,
+
           lua_ls = function()
             lspconfig.lua_ls.setup({
-              capabilities = cmp_nvim_lsp.default_capabilities(),
+              capabilities = capabilities,
               settings = {
                 Lua = {
                   runtime = { version = 'LuaJIT' },
@@ -42,17 +44,27 @@ return {
               }
             })
           end,
+
+          clangd = function()
+            lspconfig.clangd.setup({
+              capabilities = capabilities,
+              root_dir = function()
+                return vim.fn.getcwd()
+              end,
+            })
+          end,
+
           tinymist = function()
             lspconfig.tinymist.setup({
-              capabilities = cmp_nvim_lsp.default_capabilities(),
+              capabilities = capabilities,
+              root_dir = function()
+                return vim.fn.getcwd()
+              end,
               settings = {
                 formatterMode = 'typstyle',
                 exportPdf = 'onSave',
                 semanticTokens = 'disable',
               },
-              root_dir = function(fname)
-                return vim.fn.getcwd()
-              end,
             })
           end
         }
@@ -84,6 +96,21 @@ return {
           vim.keymap.set("n", "<leader>la", vim.lsp.buf.code_action, opts)
           vim.keymap.set("n", "<leader>lk", vim.diagnostic.open_float, opts)
         end,
+      })
+
+      -- Cmp setup with proper completion mapping
+      cmp.setup({
+        mapping = cmp.mapping.preset.insert({
+          ['<C-n>'] = cmp.mapping.select_next_item(),
+          ['<C-p>'] = cmp.mapping.select_prev_item(),
+          ['<C-Space>'] = cmp.mapping.complete(),
+          ['<CR>'] = cmp.mapping.confirm({ select = true }),
+        }),
+        sources = cmp.config.sources({
+          { name = 'nvim_lsp' },
+          { name = 'buffer' },
+          { name = 'path' },
+        }),
       })
     end,
   },
