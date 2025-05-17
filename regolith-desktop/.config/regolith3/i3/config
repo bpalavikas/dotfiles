@@ -211,9 +211,9 @@ for_window [class="gnome-disks"] move to workspace $ws10, layout tabbed
 for_window [class="input-remapper-gtk"] move to workspace $ws10, layout tabbed
 for_window [class="regolith-control-center"] move to workspace $ws10, layout tabbed
 
-
+# 11 monitor 2
 for_window [class="masterpdfeditor5"] move to workspace $ws11, layout tabbed
-for_window [class="Thunar"] move to workspace $ws11, layout tabbed
+for_window [class="Org.gnome.Nautilus"] move to workspace $ws11, layout tabbed
 
 ###############################################################################
 
