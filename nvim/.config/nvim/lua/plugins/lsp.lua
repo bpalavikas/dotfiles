@@ -1,182 +1,89 @@
+-- lsp_full_config.lua - Universal LSP setup with diagnostics, completion, and Typst preview
+
 return {
   {
-    'VonHeikemen/lsp-zero.nvim',
-    branch = 'v3.x',
-    lazy = true,
-    config = false,
-    init = function()
-      vim.g.lsp_zero_extend_cmp = 0
-      vim.g.lsp_zero_extend_lspconfig = 0
-    end,
-  },
-
-  {
-    'williamboman/mason.nvim',
-    config = true,
-  },
-
-  {
-    "folke/lazydev.nvim",
-    ft = "lua",
-    opts = {
-      library = {
-        { path = "${3rd}/luv/library", words = { "vim%.uv" } },
-      },
-    },
-  },
-
-  {
-    'hrsh7th/nvim-cmp',
-    event = 'InsertEnter',
-    dependencies = {
-      { 'L3MON4D3/LuaSnip' },
-      { 'onsails/lspkind.nvim' },
-      { 'nvim-tree/nvim-web-devicons' },
-      { 'hrsh7th/cmp-emoji' },
-      { 'hrsh7th/cmp-cmdline' },
-      { 'hrsh7th/cmp-path' },
-      { 'hrsh7th/cmp-buffer' },
-      { 'Saecki/crates.nvim' },
-      {
-        "saghen/blink.cmp",
-        dependencies = 'rafamadriz/friendly-snippets',
-        version = 'v0.7.6',
-        opts = {
-          sources = {
-            default = { "lazydev", "lsp", "path", "snippets", "buffer" },
-            providers = {
-              lazydev = {
-                name = "LazyDev",
-                module = "lazydev.integrations.blink",
-                score_offset = 100,
-              },
-            },
-          },
-        },
-      },
-    },
-    config = function()
-      local lsp_zero = require('lsp-zero')
-      lsp_zero.extend_cmp()
-
-      local cmp = require('cmp')
-
-      local sources = {
-        { name = 'neorg' },
-        { name = 'nvim_lsp', priority = 1000 },
-        { name = 'luasnip', keyword_length = 2 },
-        { name = 'crates' },
-        { name = 'emoji' },
-        { name = 'path' },
-        { name = 'buffer' },
-      }
-
-      local formatting = {
-        fields = { 'abbr', 'kind', 'menu' },
-        format = require('lspkind').cmp_format({ mode = 'symbol' }),
-      }
-
-      local sign = function(opts)
-        vim.fn.sign_define(opts.name, {
-          texthl = opts.name,
-          text = opts.text,
-          numhl = '',
-        })
-      end
-
-      sign({ name = 'DiagnosticSignError', text = '✘' })
-      sign({ name = 'DiagnosticSignWarn', text = '▲' })
-      sign({ name = 'DiagnosticSignHint', text = '⚑' })
-      sign({ name = 'DiagnosticSignInfo', text = '' })
-
-      vim.diagnostic.config({
-        virtual_text = true,
-        signs = true,
-        update_in_insert = true,
-        underline = true,
-        severity_sort = true,
-      })
-
-      require('luasnip.loaders.from_vscode').lazy_load()
-
-      cmp.setup({
-        formatting = formatting,
-        sources = sources,
-        mapping = cmp.mapping.preset.insert({
-          ['<C-j>'] = cmp.mapping.select_next_item(),
-          ['<C-k>'] = cmp.mapping.select_prev_item(),
-          ['<C-b>'] = cmp.mapping.scroll_docs(-4),
-          ['<C-f>'] = cmp.mapping.scroll_docs(4),
-          ['<C-y>'] = cmp.mapping.confirm { select = true },
-          ['<C-n>'] = function(_)
-            if cmp.visible() then
-              cmp.select_next_item()
-            else
-              cmp.complete()
-            end
-          end,
-        }),
-        experimental = { ghost_text = true },
-      })
-
-      cmp.setup.cmdline('/', {
-        mapping = cmp.mapping.preset.cmdline(),
-        sources = { { name = 'buffer' } },
-      })
-
-      cmp.setup.cmdline(':', {
-        mapping = cmp.mapping.preset.cmdline(),
-        sources = cmp.config.sources({
-          { name = 'path' },
-          {
-            name = 'cmdline',
-            option = { ignore_cmds = { 'Man', '!' } },
-          },
-        }),
-      })
-    end,
-  },
-
-  {
     'neovim/nvim-lspconfig',
-    cmd = { 'LspInfo', 'LspInstall', 'LspStart' },
     event = { 'BufReadPre', 'BufNewFile' },
     dependencies = {
-      { 'williamboman/mason-lspconfig.nvim', version = 'v1.11.0' },
-      { 'hrsh7th/cmp-nvim-lsp' },
-      { 'folke/neodev.nvim' },
+      { 'williamboman/mason.nvim', config = true },
+      { 'williamboman/mason-lspconfig.nvim', version = '1.29.0' },
+      'hrsh7th/cmp-nvim-lsp',
+      'hrsh7th/nvim-cmp',
+      'L3MON4D3/LuaSnip',
+      { 'chomosuke/typst-preview.nvim', lazy = false },
     },
     config = function()
-      local lsp_zero = require('lsp-zero')
-      lsp_zero.extend_lspconfig()
+      local lspconfig = require('lspconfig')
+      local cmp_nvim_lsp = require('cmp_nvim_lsp')
 
-      lsp_zero.on_attach(function(_, bufnr)
-        lsp_zero.default_keymaps({ buffer = bufnr })
-        vim.keymap.set('n', 'gn', vim.lsp.buf.rename, { desc = 'Rename Symbol', buffer = true })
-        vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { desc = 'Goto Definition', buffer = true })
-      end)
+      require('mason').setup()
 
       require('mason-lspconfig').setup({
-        ensure_installed = { 'rust_analyzer', 'lua_ls', 'clangd' },
+        ensure_installed = {
+          'clangd', 'lua_ls', 'pyright', 'rust_analyzer',
+          'bashls', 'gopls', 'texlab',
+        },
         handlers = {
-          lsp_zero.default_setup,
-          clangd = function()
-            require('lspconfig').clangd.setup({
-              cmd = { 'clangd' },
-              root_dir = require('lspconfig').util.root_pattern("git"),
-              on_attach = lsp_zero.on_attach,
-              settings = {
-                clangd = {
-                  includepaths = { "./src", "./inc" },
-                },
-              },
+          function(server_name)
+            lspconfig[server_name].setup({
+              capabilities = cmp_nvim_lsp.default_capabilities(),
             })
           end,
           lua_ls = function()
-            local lua_opts = lsp_zero.nvim_lua_ls()
-            require('lspconfig').lua_ls.setup(lua_opts)
+            lspconfig.lua_ls.setup({
+              capabilities = cmp_nvim_lsp.default_capabilities(),
+              settings = {
+                Lua = {
+                  runtime = { version = 'LuaJIT' },
+                  diagnostics = { globals = { 'vim' } },
+                  workspace = { checkThirdParty = false },
+                  telemetry = { enable = false },
+                }
+              }
+            })
           end,
-        },
+          tinymist = function()
+            lspconfig.tinymist.setup({
+              capabilities = cmp_nvim_lsp.default_capabilities(),
+              settings = {
+                formatterMode = 'typstyle',
+                exportPdf = 'onSave',
+                semanticTokens = 'disable',
+              },
+              root_dir = function(fname)
+                return vim.fn.getcwd()
+              end,
+            })
+          end
+        }
+      })
+
+      -- Diagnostics and border config
+      vim.diagnostic.config({
+        virtual_text = true,
+        signs = true,
+        underline = true,
+        update_in_insert = false,
+        severity_sort = true,
+        float = { border = 'rounded' },
+      })
+
+      -- Hover handler with rounded border
+      vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
+        vim.lsp.handlers.hover,
+        { border = "rounded" }
+      )
+
+      -- LspAttach mappings
+      vim.api.nvim_create_autocmd('LspAttach', {
+        callback = function(e)
+          local opts = { buffer = e.buf }
+          vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
+          vim.keymap.set("n", "gh", vim.lsp.buf.document_highlight, opts)
+          vim.keymap.set("n", "<leader>lr", vim.lsp.buf.rename, opts)
+          vim.keymap.set("n", "<leader>la", vim.lsp.buf.code_action, opts)
+          vim.keymap.set("n", "<leader>lk", vim.diagnostic.open_float, opts)
+        end,
       })
     end,
   },
