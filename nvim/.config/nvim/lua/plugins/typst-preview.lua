@@ -1,6 +1,3 @@
-
--- typst_preview.lua - standalone Typst preview setup
-
 return {
   {
     'chomosuke/typst-preview.nvim',
