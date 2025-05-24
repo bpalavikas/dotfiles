@@ -20,6 +20,8 @@ return {
       require('mason').setup()
 
       require('mason-lspconfig').setup({
+        automatic_installation = false,
+        automatic_setup = false, -- 🔧 disables automatic_enable feature that crashes on some setups
         ensure_installed = {
           'clangd', 'lua_ls', 'pyright', 'rust_analyzer',
           'bashls', 'gopls', 'texlab',
