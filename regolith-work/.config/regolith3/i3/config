@@ -217,7 +217,7 @@ for_window [class="regolith-control-center"] move to workspace $ws10, layout tab
 
 
 
-exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpaper/Linux/IMG_584799.jpg
+exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper/Linux/IMG_584799.jpg
 ###############################################################################
 
 # WM Config Partials
