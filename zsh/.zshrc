@@ -122,8 +122,12 @@ alias G=git
 alias bat=batcat
 alias fd=fdfind
 
-alias lls="exa -la"
-alias lt="exa -T"
+alias ls="exa"
+alias ll="exa -l"
+alias lh="exa -lh"
+alias la="exa -lah"
+alias ltt="exa -T"
+alias lt="exa -T -L 1"
 
 #
 # Example aliases
