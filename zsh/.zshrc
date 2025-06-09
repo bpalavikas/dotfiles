@@ -129,6 +129,10 @@ alias la="exa -lah"
 alias ltt="exa -T"
 alias lt="exa -T -L 1"
 
+alias gb="fzf-git-branch.sh"
+alias gl="fzf-git-log.sh"
+alias gst="fzf-git-stash.sh"
+
 #
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -150,3 +154,7 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 export PATH=/opt/cmake-3.30/bin:$PATH
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
