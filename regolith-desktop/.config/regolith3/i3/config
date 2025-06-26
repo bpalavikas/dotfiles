@@ -152,7 +152,7 @@ set_from_resource $wm.binding.move_down wm.binding.move_down Shift+j
 # 1 Browser
 for_window [class="Google-chrome"] move to workspace $ws1, layout tabbed
 # for_window [class="Vivaldi-stable"] move to workspace $ws1, layout tabbed
-for_window [class="brave-browser"] move workspace $ws1, layout tabbed
+for_window [class="Brave-browser"] move workspace $ws1, layout tabbed
 
 # 2 Terminal
 for_window [class="Alacritty"] move to workspace $ws2, layout tabbed
