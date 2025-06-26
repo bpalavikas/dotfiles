@@ -154,6 +154,7 @@ for_window [class="Google-chrome"] move to workspace $ws1, layout tabbed
 # for_window [class="Vivaldi-stable"] move to workspace $ws1, layout tabbed
 for_window [class="brave-browser"] move workspace $ws1, layout tabbed
 for_window [class="Thunar"] move to workspace $ws1, layout tabbed
+# org.gnome.Nautilus
 
 # 2 Terminal
 for_window [class="Alacritty"] move to workspace $ws2, layout tabbed
@@ -214,10 +215,6 @@ for_window [class="input-remapper-gtk"] move to workspace $ws10, layout tabbed
 for_window [class="regolith-control-center"] move to workspace $ws10, layout tabbed
 
 
-
-
-
-exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper/Image/deviantart-wallpaper-images-25.jpg
 ###############################################################################
 
 # WM Config Partials
