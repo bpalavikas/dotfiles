@@ -215,6 +215,9 @@ for_window [class="regolith-control-center"] move to workspace $ws10, layout tab
 for_window [class="masterpdfeditor5"] move to workspace $ws11, layout tabbed
 for_window [class="Org.gnome.Nautilus"] move to workspace $ws11, layout tabbed
 
+# 12 monitor 2
+for_window [class="spotify"] move to workspace $ws12, layout tabbed
+
 ###############################################################################
 
 # WM Config Partials
