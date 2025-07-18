@@ -160,7 +160,7 @@ for_window [class="org.remmina.Remmina"] move to workspace $ws2, layout tabbed
 
 # 3 IDE
 for_window [class="Code"] move to workspace $ws3, layout tabbed
-for_window [class="MPLAB X IDE v6.20"] move to workspace $ws3, layout tabbed
+for_window [class="MPLAB X IDE v6.25"] move to workspace $ws3, layout tabbed
 for_window [class="rstudio"] move to workspace $ws3, layout tabbed
 for_window [class="kicad"] move to workspace $ws3, layout tabbed
 for_window [class="ondel-es"] move to workspace $ws3, layout tabbed
@@ -168,14 +168,13 @@ for_window [class="ondel-es"] move to workspace $ws3, layout tabbed
 # 4 Program
 for_window [class="com-st-microxplorer-maingui-STM32CubeMX"] move to workspace $ws4, layout tabbed
 for_window [class="com.st.app.Main"] move to workspace $ws4, layout tabbed
-for_window [class="MPLAB IPE v6.20"] move to workspace $ws4, layout tabbed
+for_window [class="MPLAB IPE v6.25"] move to workspace $ws4, layout tabbed
 for_window [class="bambu-studio"] move to workspace $ws4, layout tabbed
 
 # 5 Debug
-for_window [class="Ozone"] move to workspace $ws5, layout tabbed
 for_window [class="SystemView"] move to workspace $ws5, layout tabbed
+for_window [class="Logic"] move to workspace $ws5, layout tabbed
 for_window [class="tabby"] move to workspace $ws5, layout tabbed
-for_window [class="logic"] move to workspace $ws5, layout tabbed
 
 # 6 Network
 for_window [class="MQTT-Explorer"] move to workspace $ws6, layout tabbed
@@ -212,11 +211,14 @@ for_window [class="input-remapper-gtk"] move to workspace $ws10, layout tabbed
 for_window [class="regolith-control-center"] move to workspace $ws10, layout tabbed
 
 # 11 monitor 2
-for_window [class="masterpdfeditor5"] move to workspace $ws11, layout tabbed
-for_window [class="Org.gnome.Nautilus"] move to workspace $ws11, layout tabbed
+for_window [class="Ozone"] move to workspace $ws11, layout tabbed
+
+for_window [class="Org.gnome.Nautilus"] move to workspace $ws12, layout tabbed
+
+for_window [class="masterpdfeditor5"] move to workspace $ws13, layout tabbed
 
 # 12 monitor 2
-for_window [class="spotify"] move to workspace $ws12, layout tabbed
+for_window [class="spotify"] move to workspace $ws14, layout tabbed
 
 ###############################################################################
 
