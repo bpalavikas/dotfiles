@@ -160,6 +160,7 @@ for_window [class="org.remmina.Remmina"] move to workspace $ws2, layout tabbed
 
 # 3 IDE
 for_window [class="Code"] move to workspace $ws3, layout tabbed
+for_window [class="jetbrains-studio"] move to workspace $ws3, layout tabbed
 for_window [class="MPLAB X IDE v6.25"] move to workspace $ws3, layout tabbed
 for_window [class="rstudio"] move to workspace $ws3, layout tabbed
 for_window [class="kicad"] move to workspace $ws3, layout tabbed
@@ -189,7 +190,7 @@ for_window [class="fadein"] move to workspace $ws7, layout tabbed
 for_window [class="obsidian"] move to workspace $ws7, layout tabbed
 for_window [class="gimp-2.10"] move to workspace $ws7, layout tabbed
 for_window [class="Inkscape"] move to workspace $ws7, layout tabbed
-for_window [class="DesktopEditors"] move to workspace $ws7, layout tabbed
+for_window [class="ONLYOFFICE Desktop Editors"] move to workspace $ws7, layout tabbed
 for_window [class="Gnome-terminal"] move to workspace $ws7, layout tabbed
 
 # 8 Media
@@ -206,7 +207,7 @@ for_window [class="stacer"] move to workspace $ws10, layout tabbed
 for_window [class="NordPass"] move to workspace $ws10, layout tabbed
 for_window [class="Insync"] move to workspace $ws10, layout tabbed
 for_window [class="Vial"] move to workspace $ws10, layout tabbed
-for_window [class="gnome-disks"] move to workspace $ws10, layout tabbed
+for_window [class="Gnome-disks"] move to workspace $ws10, layout tabbed
 for_window [class="input-remapper-gtk"] move to workspace $ws10, layout tabbed
 for_window [class="regolith-control-center"] move to workspace $ws10, layout tabbed
 
@@ -215,10 +216,10 @@ for_window [class="Ozone"] move to workspace $ws11, layout tabbed
 
 for_window [class="Org.gnome.Nautilus"] move to workspace $ws12, layout tabbed
 
-for_window [class="masterpdfeditor5"] move to workspace $ws13, layout tabbed
+for_window [class="Master PDF Editor 5"] move to workspace $ws13, layout tabbed
 
 # 12 monitor 2
-for_window [class="spotify"] move to workspace $ws14, layout tabbed
+for_window [class="Spotify"] move to workspace $ws14, layout tabbed
 
 ###############################################################################
 
