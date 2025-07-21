@@ -161,7 +161,8 @@ for_window [class="org.remmina.Remmina"] move to workspace $ws2, layout tabbed
 
 # 3 IDE
 for_window [class="Code"] move to workspace $ws3, layout tabbed
-for_window [class="MPLAB X IDE v6.20"] move to workspace $ws3, layout tabbed
+for_window [class="jetbrains-studio"] move to workspace $ws3, layout tabbed
+for_window [class="MPLAB X IDE v6.25"] move to workspace $ws3, layout tabbed
 for_window [class="rstudio"] move to workspace $ws3, layout tabbed
 for_window [class="kicad"] move to workspace $ws3, layout tabbed
 for_window [class="ondel-es"] move to workspace $ws3, layout tabbed
@@ -192,7 +193,7 @@ for_window [class="obsidian"] move to workspace $ws7, layout tabbed
 for_window [class="gimp-2.10"] move to workspace $ws7, layout tabbed
 for_window [class="Inkscape"] move to workspace $ws7, layout tabbed
 for_window [class="masterpdfeditor5"] move to workspace $ws7, layout tabbed
-for_window [class="DesktopEditors"] move to workspace $ws7, layout tabbed
+for_window [class="ONLYOFFICE Desktop Editors"] move to workspace $ws7, layout tabbed
 for_window [class="Gnome-terminal"] move to workspace $ws7, layout tabbed
 
 # 8 Media
