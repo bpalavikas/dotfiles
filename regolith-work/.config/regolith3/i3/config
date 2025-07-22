@@ -153,7 +153,6 @@ set_from_resource $wm.binding.move_down wm.binding.move_down Shift+j
 for_window [class="Google-chrome"] move to workspace $ws1, layout tabbed
 # for_window [class="Vivaldi-stable"] move to workspace $ws1, layout tabbed
 for_window [class="Brave-browser"] move workspace $ws1, layout tabbed
-# for_window [class="Thunar"] move to workspace $ws1, layout tabbed
 
 # 2 Terminal
 for_window [class="Alacritty"] move to workspace $ws2, layout tabbed
@@ -170,14 +169,13 @@ for_window [class="ondel-es"] move to workspace $ws3, layout tabbed
 # 4 Program
 for_window [class="com-st-microxplorer-maingui-STM32CubeMX"] move to workspace $ws4, layout tabbed
 for_window [class="com.st.app.Main"] move to workspace $ws4, layout tabbed
-for_window [class="MPLAB IPE v6.20"] move to workspace $ws4, layout tabbed
+for_window [class="MPLAB IPE v6.25"] move to workspace $ws4, layout tabbed
 for_window [class="bambu-studio"] move to workspace $ws4, layout tabbed
 
 # 5 Debug
-for_window [class="Ozone"] move to workspace $ws5, layout tabbed
 for_window [class="SystemView"] move to workspace $ws5, layout tabbed
+for_window [class="Logic"] move to workspace $ws5, layout tabbed
 for_window [class="tabby"] move to workspace $ws5, layout tabbed
-for_window [class="logic"] move to workspace $ws5, layout tabbed
 
 # 6 Network
 for_window [class="MQTT-Explorer"] move to workspace $ws6, layout tabbed
@@ -192,7 +190,6 @@ for_window [class="fadein"] move to workspace $ws7, layout tabbed
 for_window [class="obsidian"] move to workspace $ws7, layout tabbed
 for_window [class="gimp-2.10"] move to workspace $ws7, layout tabbed
 for_window [class="Inkscape"] move to workspace $ws7, layout tabbed
-for_window [class="masterpdfeditor5"] move to workspace $ws7, layout tabbed
 for_window [class="ONLYOFFICE Desktop Editors"] move to workspace $ws7, layout tabbed
 for_window [class="Gnome-terminal"] move to workspace $ws7, layout tabbed
 
@@ -210,9 +207,19 @@ for_window [class="stacer"] move to workspace $ws10, layout tabbed
 for_window [class="NordPass"] move to workspace $ws10, layout tabbed
 for_window [class="Insync"] move to workspace $ws10, layout tabbed
 for_window [class="Vial"] move to workspace $ws10, layout tabbed
-for_window [class="gnome-disks"] move to workspace $ws10, layout tabbed
+for_window [class="Gnome-disks"] move to workspace $ws10, layout tabbed
 for_window [class="input-remapper-gtk"] move to workspace $ws10, layout tabbed
 for_window [class="regolith-control-center"] move to workspace $ws10, layout tabbed
+
+
+#2
+for_window [class="Ozone"] move to workspace $ws11, layout tabbed
+
+for_window [class="Org.gnome.Nautilus"] move to workspace $ws12, layout tabbed
+
+for_window [class="Master PDF Editor 5"] move to workspace $ws13, layout tabbed
+
+
 
 ###############################################################################
 
