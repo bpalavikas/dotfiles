@@ -92,8 +92,9 @@ export LD_COLORS="ow=:di=34" # removes highlights for full prvlig folders
 
 # export MANPATH="/usr/local/man:$MANPATH"
 export PATH=$PATH:/usr/local/go/bin
-# export PATH="$HOME/miniconda3/bin:$PATH"  # commented out by conda initialize
 export PATH=$PATH:/opt/microchip/xc8/v2.46/bin
+export PATH=$PATH:/opt/microchip/xc8/v2.50/bin
+export PATH=$PATH:/opt/microchip/xc8/v3.00/bin
 export PATH=$PATH:/opt/microchip/xc16/v2.10/bin
 export PATH=$PATH:/opt/microchip/xc32/v4.60/bin
 
@@ -138,20 +139,6 @@ alias gst="fzf-git-stash.sh"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('$HOME/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "$HOME/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "$HOME/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/little-bogart/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
 
 export PATH=/opt/cmake-3.30/bin:$PATH
 
