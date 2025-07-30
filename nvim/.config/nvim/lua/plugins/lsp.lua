@@ -24,7 +24,7 @@ return {
         automatic_setup = false, -- 🔧 disables automatic_enable feature that crashes on some setups
         ensure_installed = {
           'clangd', 'lua_ls', 'rust_analyzer',
-          'bashls', 'gopls', 'texlab',
+          'bashls', 'gopls', 'texlab', 'basedpyright',
         },
         handlers = {
           function(server_name)
@@ -44,6 +44,12 @@ return {
                   telemetry = { enable = false },
                 }
               }
+            })
+          end,
+
+          basedpyright = function()
+            lspconfig.basedpyright.setup({
+              capabilities = capabilities,
             })
           end,
 
