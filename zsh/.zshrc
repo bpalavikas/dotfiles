@@ -99,6 +99,9 @@ export PATH=$PATH:/opt/microchip/xc16/v2.10/bin
 export PATH=$PATH:/opt/microchip/xc32/v4.60/bin
 
 export PATH=$PATH:~/miniconda3/bin/
+
+export PATH="/usr/local/texlive/2025/bin/x86_64-linux:$PATH"
+#
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
