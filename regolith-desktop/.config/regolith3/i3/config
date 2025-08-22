@@ -243,7 +243,7 @@ include $HOME/.config/regolith3/i3/config.d/*
 exec --no-startup-id [ -z "${NOTIFY_SOCKET-}" ] \
   && systemctl --user start regolith-x11.target \
   || systemd-notify --ready
-
+exec --no-startup-id picom -b
 
 ###############################################################################
 
