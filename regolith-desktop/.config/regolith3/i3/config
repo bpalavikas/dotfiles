@@ -215,7 +215,7 @@ for_window [class="Ozone"] move to workspace $ws11, layout tabbed
 for_window [class="Vivaldi-stable"] move to workspace $ws11, layout tabbed
 
 # 12 monitor 2
-for_window [class="Org.gnome.Nautilus"] move to workspace $ws12, layout tabbed
+for_window [class="org.gnome.Nautilus"] move to workspace $ws12, layout tabbed
 
 # 13 monitor 2
 for_window [class="Master PDF Editor 5"] move to workspace $ws13, layout tabbed

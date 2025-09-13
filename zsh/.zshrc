@@ -126,6 +126,7 @@ alias python=python3
 alias G=git
 alias bat=batcat
 alias fd=fdfind
+alias vim=nvim
 
 alias ls="exa"
 alias ll="exa -l"
