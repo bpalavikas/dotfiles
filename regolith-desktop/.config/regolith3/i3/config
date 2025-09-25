@@ -204,6 +204,7 @@ for_window [class="outlook-for-linux"] move to workspace $ws9, layout tabbed
 # 10 Util
 for_window [class="stacer"] move to workspace $ws10, layout tabbed
 for_window [class="NordPass"] move to workspace $ws10, layout tabbed
+for_window [class="nordvpn-gui"] move to workspace $ws10, layout tabbed
 for_window [class="Insync"] move to workspace $ws10, layout tabbed
 for_window [class="Vial"] move to workspace $ws10, layout tabbed
 for_window [class="Gnome-disks"] move to workspace $ws10, layout tabbed
