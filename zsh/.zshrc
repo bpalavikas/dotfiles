@@ -168,3 +168,4 @@ unset __conda_setup
 
 
 . "$HOME/.local/bin/env"
+export XLA_FLAGS="--xla_gpu_cuda_data_dir=$CONDA_PREFIX/nvvm/libdevice"

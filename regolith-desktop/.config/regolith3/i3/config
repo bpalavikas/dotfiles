@@ -150,8 +150,10 @@ set_from_resource $wm.binding.move_down wm.binding.move_down Shift+j
 ###############################################################################
 
 # 1 Browser
-for_window [class="Google-chrome"] move to workspace $ws1, layout tabbed
+for_window [class="zen"] move to workspace $ws1, layout tabbed
 for_window [class="Brave-browser"] move workspace $ws1, layout tabbed
+for_window [class="proton mail"] move to workspace $ws1, layout tabbed
+for_window [class="Proton Mail"] move to workspace $ws1, layout tabbed
 
 # 2 Terminal
 for_window [class="Alacritty"] move to workspace $ws2, layout tabbed
@@ -165,23 +167,25 @@ for_window [class="rstudio"] move to workspace $ws3, layout tabbed
 for_window [class="kicad"] move to workspace $ws3, layout tabbed
 for_window [class="ondel-es"] move to workspace $ws3, layout tabbed
 
-# 4 Program
+# 4 Program and Debug
 for_window [class="com-st-microxplorer-maingui-STM32CubeMX"] move to workspace $ws4, layout tabbed
 for_window [class="com.st.app.Main"] move to workspace $ws4, layout tabbed
 for_window [class="MPLAB IPE v6.25"] move to workspace $ws4, layout tabbed
 for_window [class="bambu-studio"] move to workspace $ws4, layout tabbed
+for_window [class="SystemView"] move to workspace $ws4, layout tabbed
+for_window [class="Logic"] move to workspace $ws4, layout tabbed
+for_window [class="tabby"] move to workspace $ws4, layout tabbed
 
-# 5 Debug
-for_window [class="SystemView"] move to workspace $ws5, layout tabbed
-for_window [class="Logic"] move to workspace $ws5, layout tabbed
-for_window [class="tabby"] move to workspace $ws5, layout tabbed
+# 5
 
 # 6 Network
 for_window [class="MQTT-Explorer"] move to workspace $ws6, layout tabbed
 for_window [class="SerialTest"] move to workspace $ws6, layout tabbed
 for_window [class="mongodb compass"] move to workspace $ws6, layout tabbed
+for_window [class="MongoDB Compass"] move to workspace $ws6, layout tabbed
 for_window [class="Angry IP Scanner"] move to workspace $ws6, layout tabbed
 for_window [class="Wireshark"] move to workspace $ws6, layout tabbed
+for_window [class="MQTTX"] move to workspace $ws6, layout tabbed
 
 # 7 Graphic
 for_window [class="draw.io"] move to workspace $ws7, layout tabbed
@@ -200,6 +204,8 @@ for_window [class="obs"] move to workspace $ws8, layout tabbed
 for_window [class="Microsoft-edge"] move to workspace $ws9, layout tabbed
 for_window [class="teams-for-linux"] move to workspace $ws9, layout tabbed
 for_window [class="outlook-for-linux"] move to workspace $ws9, layout tabbed
+for_window [class="Microsoft Outlook"] move to workspace $ws9, layout tabbed
+for_window [class="microsoft outlook"] move to workspace $ws9, layout tabbed
 
 # 10 Util
 for_window [class="stacer"] move to workspace $ws10, layout tabbed
