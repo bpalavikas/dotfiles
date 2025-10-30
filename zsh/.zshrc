@@ -88,7 +88,7 @@ plugins=(git zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-export LD_COLORS="ow=:di=34" # removes highlights for full prvlig folders
+export LS_COLORS="ow=:di=34" # removes highlights for full prvlig folders
 
 # export MANPATH="/usr/local/man:$MANPATH"
 export PATH=$PATH:/usr/local/go/bin
@@ -128,12 +128,12 @@ alias bat=batcat
 alias fd=fdfind
 alias vim=nvim
 
-alias ls="exa"
-alias ll="exa -l"
-alias lh="exa -lh"
-alias la="exa -lah"
-alias ltt="exa -T"
-alias lt="exa -T -L 1"
+alias ls="eza"
+alias ll="eza -l"
+alias lh="eza -lh"
+alias la="eza -lah"
+alias ltt="eza -T"
+alias lt="eza -T -L 1"
 
 alias gb="fzf-git-branch.sh"
 alias gl="fzf-git-log.sh"
@@ -148,8 +148,8 @@ alias gst="fzf-git-stash.sh"
 export PATH=/opt/cmake-3.30/bin:$PATH
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -167,5 +167,7 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 
-. "$HOME/.local/bin/env"
+[ -f "$HOME/.local/bin/env" ] && . "$HOME/.local/bin/env"
 export XLA_FLAGS="--xla_gpu_cuda_data_dir=$CONDA_PREFIX/nvvm/libdevice"
+
+
