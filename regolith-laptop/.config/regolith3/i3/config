@@ -153,7 +153,6 @@ set_from_resource $wm.binding.move_down wm.binding.move_down Shift+j
 for_window [class="Google-chrome"] move to workspace $ws1, layout tabbed
 # for_window [class="Vivaldi-stable"] move to workspace $ws1, layout tabbed
 for_window [class="Brave-browser"] move workspace $ws1, layout tabbed
-for_window [class="Thunar"] move to workspace $ws1, layout tabbed
 # org.gnome.Nautilus
 
 # 2 Terminal
@@ -162,7 +161,7 @@ for_window [class="org.remmina.Remmina"] move to workspace $ws2, layout tabbed
 
 # 3 IDE
 for_window [class="Code"] move to workspace $ws3, layout tabbed
-for_window [class="MPLAB X IDE v6.20"] move to workspace $ws3, layout tabbed
+for_window [class="MPLAB X IDE v6.25"] move to workspace $ws3, layout tabbed
 for_window [class="rstudio"] move to workspace $ws3, layout tabbed
 for_window [class="kicad"] move to workspace $ws3, layout tabbed
 for_window [class="ondel-es"] move to workspace $ws3, layout tabbed
@@ -170,7 +169,7 @@ for_window [class="ondel-es"] move to workspace $ws3, layout tabbed
 # 4 Program
 for_window [class="com-st-microxplorer-maingui-STM32CubeMX"] move to workspace $ws4, layout tabbed
 for_window [class="com.st.app.Main"] move to workspace $ws4, layout tabbed
-for_window [class="MPLAB IPE v6.20"] move to workspace $ws4, layout tabbed
+for_window [class="MPLAB IPE v6.25"] move to workspace $ws4, layout tabbed
 for_window [class="bambu-studio"] move to workspace $ws4, layout tabbed
 
 # 5 Debug
@@ -200,10 +199,8 @@ for_window [class="Gnome-terminal"] move to workspace $ws7, layout tabbed
 for_window [class="vlc"] move to workspace $ws8, layout tabbed
 for_window [class="obs"] move to workspace $ws8, layout tabbed
 
-# 9 Work
-for_window [class="Microsoft-edge"] move to workspace $ws9, layout tabbed
-for_window [class="teams-for-linux"] move to workspace $ws9, layout tabbed
-for_window [class="outlook-for-linux"] move to workspace $ws9, layout tabbed
+# 9
+#for_window [class="outlook-for-linux"] move to workspace $ws9, layout tabbed
 
 # 10 Util
 for_window [class="stacer"] move to workspace $ws10, layout tabbed
@@ -214,6 +211,9 @@ for_window [class="gnome-disks"] move to workspace $ws10, layout tabbed
 for_window [class="input-remapper-gtk"] move to workspace $ws10, layout tabbed
 for_window [class="regolith-control-center"] move to workspace $ws10, layout tabbed
 
+
+
+bindcode $mod+Shift+59 exec --no-startup-id ~/.local/bin/kb-toggle.sh
 
 ###############################################################################
 
@@ -240,7 +240,3 @@ exec --no-startup-id [ -z "${NOTIFY_SOCKET-}" ] \
 
 
 ###############################################################################
-
-
-
-
