@@ -220,6 +220,7 @@ for_window [class="Org.gnome.Nautilus"] move to workspace $ws12, layout tabbed
 for_window [class="Master PDF Editor 5"] move to workspace $ws13, layout tabbed
 
 
+bindcode $mod+Shift+59 exec --no-startup-id ~/.local/bin/kb-toggle.sh
 
 ###############################################################################
 
