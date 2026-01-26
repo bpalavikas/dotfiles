@@ -3,3 +3,7 @@
 
 wm.bar.position: top
 regolith.look.path: /usr/share/regolith-look/blackhole
+!regolith.wallpaper.file: /usr/share/backgrounds/ubuntu-wallpaper-d.png
+!regolith.lockscreen.wallpaper.file: /usr/share/backgrounds/ubuntu-wallpaper-d.png
+regolith.wallpaper.file: /usr/share/backgrounds/ubuntu-wallpaper-d.png
+regolith.lockscreen.wallpaper.file: /usr/share/backgrounds/ubuntu-wallpaper-d.png
