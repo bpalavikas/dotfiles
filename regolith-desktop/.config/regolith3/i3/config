@@ -151,6 +151,7 @@ set_from_resource $wm.binding.move_down wm.binding.move_down Shift+j
 
 # 1 Browser
 for_window [class="zen"] move to workspace $ws1, layout tabbed
+for_window [class="Navigator"] move to workspace $ws1, layout tabbed
 for_window [class="Brave-browser"] move workspace $ws1, layout tabbed
 for_window [class="proton mail"] move to workspace $ws1, layout tabbed
 for_window [class="Proton Mail"] move to workspace $ws1, layout tabbed
@@ -212,6 +213,10 @@ for_window [class="stacer"] move to workspace $ws10, layout tabbed
 for_window [class="NordPass"] move to workspace $ws10, layout tabbed
 for_window [class="nordvpn-gui"] move to workspace $ws10, layout tabbed
 for_window [class="Insync"] move to workspace $ws10, layout tabbed
+for_window [class="proton pass"] move to workspace $ws10, layout tabbed
+for_window [class="Proton Pass"] move to workspace $ws10, layout tabbed
+for_window [class="Proton-authenticator"] move to workspace $ws10, layout tabbed
+for_window [class="proton-authenticator"] move to workspace $ws10, layout tabbed
 for_window [class="Vial"] move to workspace $ws10, layout tabbed
 for_window [class="Gnome-disks"] move to workspace $ws10, layout tabbed
 for_window [class="input-remapper-gtk"] move to workspace $ws10, layout tabbed
