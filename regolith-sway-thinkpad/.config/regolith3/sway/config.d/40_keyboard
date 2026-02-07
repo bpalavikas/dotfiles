@@ -1,0 +1,14 @@
+# Laptop built-in keyboard: apply OS-side custom layout
+input "1:1:AT_Translated_Set_2_keyboard" {
+    xkb_file ~/.config/xkb/keymaps/bvrcolemak.xkb
+    
+}
+
+# Go60 firmware already sends Colemak: keep OS as plain US
+input "5824:10203:Go60_Keyboard" {
+    xkb_layout us
+}
+
+input "5824:10203:MoErgo_Go60_Left_Keyboard" {
+    xkb_layout us
+}

@@ -1,0 +1,9 @@
+
+bindsym $mod+Shift+comma exec --no-startup-id ~/.local/bin/kb-toggle-wayland.sh
+
+bindsym Print exec grim -g "$(slurp)" - | wl-copy
+
+bindsym Ctrl+Shift+bracketleft  exec flatpak run app.zen_browser.zen
+bindsym Ctrl+Shift+bracketright exec brave-browser
+bindsym Ctrl+Shift+semicolon    exec code
+

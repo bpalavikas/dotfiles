@@ -1,0 +1,55 @@
+###############################################################################
+# Workspace 1 browser and mail
+# Browser
+assign [app_id="brave-browser"] $ws1
+# Zen
+assign [app_id="app.zen_browser.zen"] $ws1
+
+# proton
+assign [class="Proton Mail"] $ws1
+
+# workspace 2 terminal
+# Terminal
+assign [app_id="Alacritty"] $ws2
+
+# workspace 3 code IDE
+# IDE
+assign [app_id="code"] $ws3
+
+
+# workspace 4 code IDE
+
+
+# workspace 5 code IDE
+
+
+
+
+# workspace 6 code IDE
+
+
+
+
+# workspace 7 code IDE
+
+
+
+# workspace 9 proton
+assign [app_id="proton-authenticator"] $ws9
+assign [app_id="Proton Pass"] $ws9
+
+
+# workspace 10 utils
+assign [class="stacer"] $ws10
+assign [app_id="gnome-disks"] $ws10
+
+
+
+
+# swaymsg -t get_tree | jq -r '
+  # .. | objects
+  # | select(.app_id? or .class?)
+  # | "\(.name // "-") | app_id=\(.app_id // "-") | class=\(.class // "-")"
+# '
+
+

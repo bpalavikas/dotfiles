@@ -28,16 +28,16 @@ set_from_resource $alt  wm.alt Mod1
 # These are the labels which define each workspace.
 ###############################################################################
 
-set_from_resource $ws1  wm.workspace.01.name "Browser"
-set_from_resource $ws2  wm.workspace.02.name "Terminal"
-set_from_resource $ws3  wm.workspace.03.name "IDE"
-set_from_resource $ws4  wm.workspace.04.name "Program"
-set_from_resource $ws5  wm.workspace.05.name "Debug"
-set_from_resource $ws6  wm.workspace.06.name "Network"
-set_from_resource $ws7  wm.workspace.07.name "Graphic"
-set_from_resource $ws8  wm.workspace.08.name "Media"
-set_from_resource $ws9  wm.workspace.09.name "Work"
-set_from_resource $ws10 wm.workspace.10.name "Utils"
+set_from_resource $ws1  wm.workspace.01.name "1"
+set_from_resource $ws2  wm.workspace.02.name "2"
+set_from_resource $ws3  wm.workspace.03.name "3"
+set_from_resource $ws4  wm.workspace.04.name "4"
+set_from_resource $ws5  wm.workspace.05.name "5"
+set_from_resource $ws6  wm.workspace.06.name "6"
+set_from_resource $ws7  wm.workspace.07.name "7"
+set_from_resource $ws8  wm.workspace.08.name "8"
+set_from_resource $ws9  wm.workspace.09.name "9"
+set_from_resource $ws10 wm.workspace.10.name "10"
 set_from_resource $ws11 wm.workspace.11.name "11"
 set_from_resource $ws12 wm.workspace.12.name "12"
 set_from_resource $ws13 wm.workspace.13.name "13"
@@ -47,6 +47,26 @@ set_from_resource $ws16 wm.workspace.16.name "16"
 set_from_resource $ws17 wm.workspace.17.name "17"
 set_from_resource $ws18 wm.workspace.18.name "18"
 set_from_resource $ws19 wm.workspace.19.name "19"
+
+set $ws1  "$ws1"
+set $ws2  "$ws2"
+set $ws3  "$ws3"
+set $ws4  "$ws4"
+set $ws5  "$ws5"
+set $ws6  "$ws6"
+set $ws7  "$ws7"
+set $ws8  "$ws8"
+set $ws9  "$ws9"
+set $ws10 "$ws10"
+set $ws11 "$ws11"
+set $ws12 "$ws12"
+set $ws13 "$ws13"
+set $ws14 "$ws14"
+set $ws15 "$ws15"
+set $ws16 "$ws16"
+set $ws17 "$ws17"
+set $ws18 "$ws18"
+set $ws19 "$ws19"
 
 ###############################################################################
 # Workspace Keys
@@ -124,10 +144,8 @@ set_from_resource $wm.bar.workspace.urgent.background.color wm.bar.workspace.urg
 set_from_resource $wm.bar.workspace.urgent.text.color wm.bar.workspace.urgent.text.color "#fdf6e3"
 
 # Sets wm font for dialogs
-#set_from_resource $wm.font gtk.font_name HackNerdFont 13
 set_from_resource $wm.font gtk.font_name Sans 13
-#font pango:$wm.font
-font pango:Hack Nerd Font 11
+font pango:$wm.font
 
 ###############################################################################
 # Common Navigation Bindings
@@ -146,79 +164,23 @@ set_from_resource $wm.binding.move_up wm.binding.move_up Shift+k
 set_from_resource $wm.binding.move_down wm.binding.move_down Shift+j
 
 ###############################################################################
-# Window 
-###############################################################################
-
-# 1 Browser
-for_window [class="Google-chrome"] move to workspace $ws1, layout tabbed
-for_window [class="Brave-browser"] move to workspace $ws1, layout tabbed
-for_window [app_id="brave-browser"] move to workspace $ws1, layout tabbed
-
-# 2 Terminal
-for_window [class="Alacritty"] move to workspace $ws2, layout tabbed
-for_window [app_id="Alacritty"] move to workspace $ws2, layout tabbed
-for_window [class="org.remmina.Remmina"] move to workspace $ws2, layout tabbed
-
-# 3 IDE
-for_window [class="Code"] move to workspace $ws3, layout tabbed
-for_window [class="rstudio"] move to workspace $ws3, layout tabbed
-
-# 4 Program
-
-# 5 Debug
-
-# 6 Network
-
-# 7 Graphic
-for_window [class="draw.io"] move to workspace $ws7, layout tabbed
-for_window [class="fadein"] move to workspace $ws7, layout tabbed
-for_window [class="obsidian"] move to workspace $ws7, layout tabbed
-for_window [class="gimp-2.10"] move to workspace $ws7, layout tabbed
-for_window [class="Inkscape"] move to workspace $ws7, layout tabbed
-for_window [class="masterpdfeditor5"] move to workspace $ws7, layout tabbed
-for_window [class="DesktopEditors"] move to workspace $ws7, layout tabbed
-for_window [class="Gnome-terminal"] move to workspace $ws7, layout tabbed
-
-# 8 Media
-for_window [class="vlc"] move to workspace $ws8, layout tabbed
-
-# 9
-#for_window [class="outlook-for-linux"] move to workspace $ws9, layout tabbed
-
-# 10 Util
-for_window [class="stacer"] move to workspace $ws10, layout tabbed
-for_window [class="Insync"] move to workspace $ws10, layout tabbed
-for_window [class="Vial"] move to workspace $ws10, layout tabbed
-for_window [class="gnome-disks"] move to workspace $ws10, layout tabbed
-for_window [class="input-remapper-gtk"] move to workspace $ws10, layout tabbed
-for_window [class="regolith-control-center"] move to workspace $ws10, layout tabbed
-
-
-# bindcode $mod+Shift+59 exec --no-startup-id ~/.local/bin/kb-toggle.sh
-# bindsym $mod+Shift+Comma exec --no-startup-id ~/.local/bin/kb-toggle.sh
-
-###############################################################################
-
 # WM Config Partials
 ###############################################################################
 
 # Include common partials
 include /usr/share/regolith/common/config.d/*
 
-# Include any regolith i3 partials
-include /usr/share/regolith/i3/config.d/*
+# Include any regolith sway partials
+include /usr/share/regolith/sway/config.d/*
 
 # Include any partials common between i3 and sway sessions
 include $HOME/.config/regolith3/common-wm/config.d/*
 
-# Include any user i3 partials
-include $HOME/.config/regolith3/i3/config.d/*
+# Include any user wm partials
+include $HOME/.config/regolith3/sway/config.d/*
 
 # Start the systemd target manually is the session is not started by systemd
 # Notify systemd about successful session start otherwise
 exec --no-startup-id [ -z "${NOTIFY_SOCKET-}" ] \
-  && systemctl --user start regolith-x11.target \
+  && systemctl --user start regolith-wayland.target \
   || systemd-notify --ready
-
-
-###############################################################################

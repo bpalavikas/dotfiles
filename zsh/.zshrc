@@ -171,3 +171,7 @@ unset __conda_setup
 export XLA_FLAGS="--xla_gpu_cuda_data_dir=$CONDA_PREFIX/nvvm/libdevice"
 
 
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
