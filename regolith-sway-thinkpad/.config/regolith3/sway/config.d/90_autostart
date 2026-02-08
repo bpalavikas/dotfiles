@@ -1,0 +1,7 @@
+# proton start
+exec --no-startup-id proton-authenticator
+exec --no-startup-id proton-pass
+
+
+# nord
+# exec --no-startup-id 

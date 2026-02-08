@@ -15,7 +15,7 @@ assign [app_id="Alacritty"] $ws2
 # workspace 3 code IDE
 # IDE
 assign [app_id="code"] $ws3
-
+assign [class="jetbrains-studio"] $ws3
 
 # workspace 4 code IDE
 
@@ -37,7 +37,7 @@ assign [app_id="code"] $ws3
 # workspace 9 proton
 assign [app_id="proton-authenticator"] $ws9
 assign [app_id="Proton Pass"] $ws9
-
+assign [app_id="nordvpn-gui"] $ws9
 
 # workspace 10 utils
 assign [class="stacer"] $ws10
