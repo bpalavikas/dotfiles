@@ -1,11 +1,10 @@
-
-workspace $ws1 layout tabbed   # Browser
-workspace $ws2 layout tabbed   # Browser
-workspace $ws3 layout tabbed   # IDE
-workspace $ws4 layout tabbed   # Browser
-workspace $ws5 layout tabbed   # Browser
-workspace $ws6 layout tabbed   # Browser
-workspace $ws7 layout tabbed   # Graphics / Docs
-workspace $ws8 layout tabbed   # Browser
-workspace $ws9 layout tabbed   # Browser
-workspace $ws10 layout tabbed   # Browser
+workspace $ws1 layout tabbed   
+workspace $ws2 layout tabbed  
+workspace $ws3 layout tabbed 
+workspace $ws4 layout tabbed 
+workspace $ws5 layout tabbed
+workspace $ws6 layout tabbed
+workspace $ws7 layout tabbed
+workspace $ws8 layout tabbed
+workspace $ws9 layout tabbed
+workspace $ws10 layout tabbed

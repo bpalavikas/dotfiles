@@ -1,4 +1,5 @@
 bar {
     position top
     status_command i3status --config ~/.config/i3status/config
+    strip_workspace_numbers yes
 }
