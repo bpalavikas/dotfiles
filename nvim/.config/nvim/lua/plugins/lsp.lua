@@ -34,6 +34,11 @@ return {
           "gopls",
           "texlab",
           "basedpyright",
+          "lemminx",
+          -- "kotlin-language-server",
+          -- "gradle-language-server",
+          "jdtls",
+          "groovyls",
         },
         automatic_enable = false,
         handlers = {
