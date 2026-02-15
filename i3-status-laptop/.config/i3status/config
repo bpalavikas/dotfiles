@@ -13,7 +13,7 @@ order += "tztime local"
 
 battery bat {
     last_full_capacity = true
-    format = "  🇱🇹 %status %percentage | %remaining 🐻 "
+    format = "  🇱🇹  %status %percentage | %remaining 🐻 "
     status_chr = "⚡"
     status_bat = "🔋"
     status_full = "🔌"
@@ -29,12 +29,12 @@ ethernet _first_ {
 }
 
 wireless wlp194s0 {
-    format_up = " 🛜 %essid %quality | %ip |"
-    format_down = " 🛜 down"
+    format_up = " 🛜 %essid  %ip "
+    format_down = " 🛜 down "
 }
 
 
 tztime local {
-    format = " ⏰%H:%M:%S  📅 %d-%m-%Y |"
+    format = " ⏰ %H:%M:%S  📅 %d-%m-%Y "
 
 }
