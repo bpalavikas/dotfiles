@@ -7,7 +7,7 @@ local opt = vim.opt
 -- line numbers
 opt.relativenumber = true
 opt.number = true
-opt.numberwidth = 4
+opt.numberwidth = 1
 
 -- tabs indentation
 opt.tabstop = 2
@@ -19,9 +19,9 @@ opt.smartindent = true
 opt.smarttab = true
 opt.scrolloff = 10
 opt.list = true
-opt.cindent = false
+opt.cindent = true
 
---line wrapping
+--line wrapping 
 opt.wrap = false
 
 -- search settings
@@ -54,9 +54,6 @@ opt.backspace = "indent,eol,start"
 
 -- clipboard
 opt.clipboard:append('unnamedplus')
-
-opt.updatetime = 250
-opt.timeoutlen = 300
 
 -- split windows
 opt.splitright = true

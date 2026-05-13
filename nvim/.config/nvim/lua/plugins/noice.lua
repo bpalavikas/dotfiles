@@ -1,36 +1,54 @@
 return {
-  "folke/noice.nvim",
-  event = "VeryLazy",
-  dependencies = {
-    "MunifTanjim/nui.nvim",
-  },
-  config = function()
-    require("noice").setup({
+  {
+    "folke/noice.nvim",
+
+    event = "VeryLazy",
+
+    dependencies = {
+      "MunifTanjim/nui.nvim",
+    },
+
+    opts = {
       cmdline = {
         enabled = true,
         view = "cmdline_popup",
       },
+
       messages = {
-        enabled = false,
+        enabled = true,
       },
+
       popupmenu = {
         enabled = false,
       },
+
       notify = {
         enabled = false,
       },
+
       lsp = {
-        progress = { enabled = false },
-        signature = { enabled = false },
-        hover = { enabled = false },
-        message = { enabled = false },
+        progress = {
+          enabled = false,
+        },
+
+        signature = {
+          enabled = true,
+        },
+
+        hover = {
+          enabled = true,
+        },
+
+        message = {
+          enabled = false,
+        },
       },
+
       presets = {
-        command_palette = false,
-        long_message_to_split = false,
-        inc_rename = false,
-        lsp_doc_border = false,
+        command_palette = true,
+        long_message_to_split = true,
+        lsp_doc_border = true,
       },
-    })
-  end,
+    },
+  },
 }
