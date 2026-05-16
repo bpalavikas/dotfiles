@@ -15,7 +15,7 @@ return {
       },
 
       messages = {
-        enabled = true,
+        enabled = false,
       },
 
       popupmenu = {
@@ -32,11 +32,11 @@ return {
         },
 
         signature = {
-          enabled = true,
+          enabled = false,
         },
 
         hover = {
-          enabled = true,
+          enabled = false,
         },
 
         message = {
@@ -45,9 +45,10 @@ return {
       },
 
       presets = {
-        command_palette = true,
-        long_message_to_split = true,
-        lsp_doc_border = true,
+        command_palette = false,
+        long_message_to_split = false,
+        inc_rename = false,
+        lsp_doc_border = false,
       },
     },
   },
