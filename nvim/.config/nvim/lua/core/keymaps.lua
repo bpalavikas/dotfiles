@@ -47,10 +47,8 @@ keymap("n", "<leader>mt", "<cmd>tabnew %<CR>", { desc = "Open current buffer in 
 
 -- Buffer management
 keymap("n", "<leader><leader>d", "<cmd>bd<CR>", { desc = "Delete buffer" })
-keymap("n", "<leader><leader>f", "<cmd>bp<CR>", { desc = "Previous buffer" })
-keymap("n", "<leader><leader>g", "<cmd>bn<CR>", { desc = "Next buffer" })
-keymap("n", "<leader><leader>nb", ":e ", { desc = "Edit file" })
-keymap("n", "<leader><leader>lb", "<cmd>ls<CR>", { desc = "List buffers" })
+keymap("n", "<leader>a", "<cmd>bp<CR>", { desc = "Previous buffer" })
+keymap("n", "<leader>o", "<cmd>bn<CR>", { desc = "Next buffer" })
 
 -- Source current file
 keymap("n", "<leader><leader>x", "<cmd>source %<CR>", { desc = "Source current file" })
