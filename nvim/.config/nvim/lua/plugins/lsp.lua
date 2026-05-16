@@ -1,6 +1,7 @@
 return {
   {
     "neovim/nvim-lspconfig",
+
     event = { "BufReadPre", "BufNewFile" },
 
     dependencies = {
@@ -10,9 +11,6 @@ return {
     },
 
     config = function()
-      local lspconfig = require("lspconfig")
-      local util = require("lspconfig.util")
-
       local capabilities = require("blink.cmp").get_lsp_capabilities()
 
       require("mason").setup()
@@ -26,8 +24,6 @@ return {
           "gopls",
           "basedpyright",
           "ts_ls",
-
-          -- extra useful ones
           "vimls",
           "marksman",
           "yamlls",
@@ -40,6 +36,8 @@ return {
 
       local servers = {
         lua_ls = {
+          capabilities = capabilities,
+
           settings = {
             Lua = {
               runtime = {
@@ -65,41 +63,45 @@ return {
         },
 
         clangd = {
-          root_dir = util.root_pattern(
+          capabilities = capabilities,
+
+          root_markers = {
             "compile_commands.json",
             "compile_flags.txt",
             ".clangd",
-            ".git"
-          ),
+            ".git",
+          },
         },
 
         ts_ls = {
-          root_dir = util.root_pattern(
+          capabilities = capabilities,
+
+          root_markers = {
             "package.json",
             "tsconfig.json",
             "jsconfig.json",
-            ".git"
-          ),
+            ".git",
+          },
+
           single_file_support = false,
         },
 
-        basedpyright = {},
-        bashls = {},
-        gopls = {},
-        rust_analyzer = {},
-
-        vimls = {},
-        marksman = {},
-        yamlls = {},
-        jsonls = {},
-        html = {},
-        cssls = {},
-        dockerls = {},
+        basedpyright = { capabilities = capabilities },
+        bashls = { capabilities = capabilities },
+        gopls = { capabilities = capabilities },
+        rust_analyzer = { capabilities = capabilities },
+        vimls = { capabilities = capabilities },
+        marksman = { capabilities = capabilities },
+        yamlls = { capabilities = capabilities },
+        jsonls = { capabilities = capabilities },
+        html = { capabilities = capabilities },
+        cssls = { capabilities = capabilities },
+        dockerls = { capabilities = capabilities },
       }
 
-      for name, config in pairs(servers) do
-        config.capabilities = capabilities
-        lspconfig[name].setup(config)
+      for server, config in pairs(servers) do
+        vim.lsp.config(server, config)
+        vim.lsp.enable(server)
       end
 
       vim.diagnostic.config({
@@ -108,6 +110,7 @@ return {
         underline = true,
         update_in_insert = false,
         severity_sort = true,
+
         float = {
           border = "rounded",
         },
