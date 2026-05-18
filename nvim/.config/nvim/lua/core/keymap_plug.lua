@@ -46,3 +46,11 @@ end, { desc = "Harpoon previous" })
 keymap("n", "<leader><leader>k", function()
   require("harpoon"):list():next()
 end, { desc = "Harpoon next" })
+
+-- Template
+keymap("n", "<leader>tt", function()
+  require("telescope.builtin").find_files({
+    cwd = "~/.config/nvim/FileTemplates",
+    prompt_title = "Templates",
+  })
+end)
